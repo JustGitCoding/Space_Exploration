@@ -30,7 +30,7 @@ def scrape_all():
     return data
 
 
-
+# scrape news title + paragraph frmo redplanetscience.com
 def mars_news(browser):
     # Visit Mars NASA news site
     url = 'https://redplanetscience.com'
@@ -61,7 +61,7 @@ def mars_news(browser):
 
     return news_title, news_para
 
-
+# Scrape featured image from spaceimages-mars.com
 def featured_image(browser):
     # Visit Space Images website
     url = 'https://spaceimages-mars.com/'
@@ -87,15 +87,12 @@ def featured_image(browser):
     
     return img_url
 
-
-def mars_facts(browser):
-    # Scrape entire table to Pandas DF
-    url = 'https://galaxyfacts-mars.com'
-
+# Scrape entire galaxyfacts table to Pandas DF
+def mars_facts():
     # Try/Except for error handling
     try:
         # use 'read_html' to scrape facts table into a pandas df
-        df = pd.read_html(url)[0]
+        df = pd.read_html('https://galaxyfacts-mars.com')[0]
     except BaseException:
         return None
     df.columns=['description', 'Mars', 'Earth']
