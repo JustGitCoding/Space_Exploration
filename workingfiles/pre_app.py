@@ -8,10 +8,11 @@ app = Flask(__name__)
 
 # Use flask_pymongo to set up Mongo connection to our 'space_app' database (in Mongo 'use space_app')
 app.config['MONGO_URI'] = 'mongodb://localhost:27017/space_app'
+mongo = PyMongo(app)
 
 # Set up app routes
 # HOME PAGE
-@app.ruote('/')
+@app.route('/')
 def index():
     mars = mongo.db.mars.find_one() ### searching for 'mars' collection within space_app database
     return render_template('index.html', mars=mars)
