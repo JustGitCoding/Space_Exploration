@@ -1,21 +1,24 @@
-# TITLE
+# Space Exploration
 
 ## Overview:
-### Purpose:
+Wrote a Python script that scrapes data related to the Mars Missions at the push of a button, and presents it in an easy-to-digest format that is compatible with desktop as well as mobile devices. 
 
+Web scraping code was first tested in a Jupyter Notebook and eventually exported into a plain Python Script ('scraping.py') which was then integrated with a Flask app ('space_app.py') and an HTML page ('/templates/index.html')
 
-## Results:
+### Desktop View
+![Desktop_view](Resources/app_screen_desktop.png)
+### Mobile View
+![Mobile_view](Resources/app_screen_iphone.png)
 
-1. 
+# Resources:
+## Websites:
+- https://redplanetscience.com
+- https://spaceimages-mars.com
+- https://galaxyfacts-mars.com
+- https://marshemispheres.com
 
-2. 
-
-3. 
-
-## Summary:
-### Point 1
-
-### Point 2
-
-## Appendix
- 
+## Tools:
+- Python (Code tested in Jupyter Notebook first)
+    - Flask, Splinter, BeautifulSoup, ChromeDriverManager, Pandas, PyMongo
+- HTML with Bootstrap 3 and CSS
+- MongoDB (NoSQL Database)
